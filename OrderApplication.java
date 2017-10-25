@@ -3,7 +3,7 @@ import java.util.*;
 public class OrderApplication
 {
     private ArrayList<Product> catalogue = new ArrayList<Product>();
-    
+
 
     private Boolean importCatalogue(){
        
@@ -11,7 +11,7 @@ public class OrderApplication
     }
 
     public Boolean createOrder(Order order){
-
+        
     }
 
 }
