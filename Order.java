@@ -17,10 +17,15 @@ public class Order {
     public Double calculatePrice()
     {   
         this.price = 0;
+        // for each item in the cart
          for(OrderLine item : cart)
          {
-            this.price += cart.getPrice();
+             // calculate the quantity and therefore price
+            this.price += item.getProduct().getPrice() * item.getQuantity();
          }
+         // give the customer their discount rating
+         this.price -= this.price * customer.getDiscountRating();
+         //return the value, can be used with a getter later.
          return this.price;
     }
 

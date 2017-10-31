@@ -19,7 +19,7 @@ public class OrderApplication
 			Scanner fileIn = new Scanner(Paths.get("catalog.cvs"));
 			if(fileIn.hasNextLine())
 			{
-				line = fileIn.nextLine(); // skips header line
+				line = fileIn.nextLine(); // skips header row
 			}
 			while (fileIn.hasNextLine()) {
                 line = fileIn.nextLine();

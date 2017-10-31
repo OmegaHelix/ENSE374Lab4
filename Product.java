@@ -10,7 +10,7 @@ public class Product{
     public Product(List<String> lineList){
         this.name = lineList.get(0);
         this.price = lineList.get(1);
-        this.productID = lineList.get(2);
+        this.productID = parseDouble(lineList.get(2));
     }
 
     public String getName()
