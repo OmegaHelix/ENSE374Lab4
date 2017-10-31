@@ -4,11 +4,15 @@ public class Order {
 
     private Date dateRecieved;
     private Double price;
-    private Int orderID;
+    private int orderID;
     private Customer customer;
     private ArrayList<OrderLine> cart = new ArrayList<OrderLine>();
     
-
+public Order(Customer customer, int orderID)
+{
+    this.orderID = orderID;
+    this.customer = customer;
+}
     public Date getDateRecieved()
     {
         return this.dateRecieved;
@@ -16,7 +20,7 @@ public class Order {
 
     public Double calculatePrice()
     {   
-        this.price = 0;
+        this.price = 0.0;
         // for each item in the cart
          for(OrderLine item : cart)
          {

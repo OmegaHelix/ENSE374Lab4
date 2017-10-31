@@ -1,16 +1,17 @@
 import java.util.*;
+import java.lang.Integer;
 
 
 public class Product{
 
     private String name;
     private Double price;
-    private Int productID;
+    private int productID;
 
     public Product(List<String> lineList){
         this.name = lineList.get(0);
-        this.price = lineList.get(1);
-        this.productID = parseDouble(lineList.get(2));
+        this.price = Double.parseDouble(lineList.get(2));
+        this.productID = Integer.parseInt(lineList.get(1));
     }
 
     public String getName()
@@ -23,7 +24,7 @@ public class Product{
         return this.price;
     }
 
-    public Int getProductID()
+    public int getProductID()
     {
         return this.productID;
     }

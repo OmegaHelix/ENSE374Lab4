@@ -3,14 +3,14 @@ import java.util.*;
 
 public class PersonalCustomer extends Customer{
     
-    private Int creditCardNumber;
+    private int creditCardNumber;
 
-    public Int getCreditCardNumber()
+    public int getCreditCardNumber()
     {
         return this.creditCardNumber;
     }
 
-    public void setCreditCardNumber(Int creditCardNumber)
+    public void setCreditCardNumber(int creditCardNumber)
     {
         this.creditCardNumber = creditCardNumber;
     }

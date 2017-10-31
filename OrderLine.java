@@ -2,11 +2,11 @@ import java.util.*;
 
 public class OrderLine{
 
-    private Int quantity;
+    private int quantity;
     private Double price;
     private Product product;
 
-    OrderLine(Produt product, Int quantity, Double price)
+    OrderLine(Product product, int quantity, Double price)
     {
         this.product = product;
         this.quantity = quantity;
@@ -18,7 +18,7 @@ public class OrderLine{
         return this.product;
     }
 
-    public Int getQuantity()
+    public int getQuantity()
     {
         return this.quantity;
     }
