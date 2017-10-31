@@ -1,7 +1,8 @@
 import java.util.*;
 
 
-public class PersonalCustomer{
+public class PersonalCustomer extends Customer{
+    
     private Int creditCardNumber;
 
     public Int getCreditCardNumber()
