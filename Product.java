@@ -3,9 +3,15 @@ import java.util.*;
 
 public class Product{
 
-    private String name = new String();
+    private String name;
     private Double price;
     private Int productID;
+
+    public Product(List<String> lineList){
+        this.name = lineList.get(0);
+        this.price = lineList.get(1);
+        this.productID = lineList.get(2);
+    }
 
     public String getName()
     {

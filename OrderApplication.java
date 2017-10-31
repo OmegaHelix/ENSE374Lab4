@@ -12,6 +12,7 @@ public class OrderApplication
 
     private Boolean importCatalogue(){
        
+        List<String> lineList = new List<String>();
         this.catalogue = new ArrayList<Product>();
 		String line = new String();
 		try {
@@ -21,8 +22,9 @@ public class OrderApplication
 				line = fileIn.nextLine(); // skips header line
 			}
 			while (fileIn.hasNextLine()) {
-				line = fileIn.nextLine();
-				catalogue.add(new Product(line));
+                line = fileIn.nextLine();
+                lineList = Arrays.asList(line.split(","));
+				catalogue.add(new Product(lineList));
 			}
 			fileIn.close();
 		
