@@ -2,9 +2,13 @@ import java.util.*;
 
 public class OrderApplication
 {
-    private ArrayList<Order> activeOrders = new ArrayList<Order>();
-    private ArrayList<Product> catalogue = new ArrayList<Product>();
+    private ArrayList<Order> activeOrders;
+    private ArrayList<Product> catalogue;
 
+    public OrderApplication()
+    {
+        this.activeOrders = new ArrayList<Order>();
+    }
 
     private Boolean importCatalogue(){
        
@@ -18,7 +22,7 @@ public class OrderApplication
 			}
 			while (fileIn.hasNextLine()) {
 				line = fileIn.nextLine();
-				employees.add(new Product(line));
+				catalogue.add(new Product(line));
 			}
 			fileIn.close();
 		
