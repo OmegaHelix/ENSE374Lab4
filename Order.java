@@ -12,6 +12,7 @@ public Order(Customer customer, int orderID)
 {
     this.orderID = orderID;
     this.customer = customer;
+    this.dateRecieved = Date.date();
 }
     public Date getDateRecieved()
     {
@@ -28,6 +29,7 @@ public Order(Customer customer, int orderID)
             this.price += item.getProduct().getPrice() * item.getQuantity();
          }
          // give the customer their discount rating
+         if(this.price > 0.0)
          this.price -= this.price * customer.getDiscountRating();
          //return the value, can be used with a getter later.
          return this.price;
