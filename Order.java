@@ -49,4 +49,9 @@ public Order(Customer customer, int orderID)
     {
         this.cart.remove(orderline);
     }
+
+    public void modifyQuantity(OrderLine orderline, int quantity)
+    {
+        this.cart.get(this.cart.indexOf(orderline)).setQuantity(quantity);
+    }
 }
