@@ -4,24 +4,30 @@ public class Customer {
 
     private String name;
     private String address;
-    private Float creditRating;
-    private Float discountRating;
+    private Double creditRating;
+    private Double discountRating;
 
 
-
+	public Customer()
+	{
+		this.name = "fake";
+		this.address = "fake";
+		this.creditRating = 0.0;
+		this.discountRating = 0.0;
+	}
 
 	/**
 	 * @return the discountRating
 	 */
-	public Float getDiscountRating() {
-		return discountRating;
+	public Double getDiscountRating() {
+		return this.discountRating;
 	}
 
 
 	/**
 	 * @param discountRating the discountRating to set
 	 */
-	public void setDiscountRating(Float discountRating) {
+	public void setDiscountRating(Double discountRating) {
 		this.discountRating = discountRating;
 	}
 
@@ -29,7 +35,7 @@ public class Customer {
 	/**
 	 * @return the creditRating
 	 */
-	public Float getCreditRating() {
+	public Double getCreditRating() {
 		return creditRating;
 	}
 
@@ -37,7 +43,7 @@ public class Customer {
 	/**
 	 * @param creditRating the creditRating to set
 	 */
-	public void setCreditRating(Float creditRating) {
+	public void setCreditRating(Double creditRating) {
 		this.creditRating = creditRating;
 	}
 

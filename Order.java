@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Order {
-
     private Date dateRecieved;
     private Double price;
     private int orderID;
@@ -12,7 +11,7 @@ public Order(Customer customer, int orderID)
 {
     this.orderID = orderID;
     this.customer = customer;
-    this.dateRecieved = Date.date();
+    this.dateRecieved = Calendar.getInstance().getTime();
 }
     public Date getDateRecieved()
     {
@@ -21,18 +20,23 @@ public Order(Customer customer, int orderID)
 
     public Double calculatePrice()
     {   
+        // reset old price
         this.price = 0.0;
         // for each item in the cart
          for(OrderLine item : cart)
-         {
              // calculate the quantity and therefore price
             this.price += item.getProduct().getPrice() * item.getQuantity();
-         }
          // give the customer their discount rating
-         if(this.price > 0.0)
-         this.price -= this.price * customer.getDiscountRating();
+         this.price = this.price - this.price * this.customer.getDiscountRating();
          //return the value, can be used with a getter later.
          return this.price;
+    }
+
+
+    public void addToCart(Product product, int quantity)
+    {
+        OrderLine orderline = new OrderLine(product, quantity, product.getPrice());
+        this.cart.add(orderline);
     }
 
 }

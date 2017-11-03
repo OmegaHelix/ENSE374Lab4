@@ -53,6 +53,18 @@ public class OrderApplication
         PersonalCustomer first_Customer = new PersonalCustomer();
         Order newOrder = new Order(first_Customer, 1);
 
+        newOrder.addToCart(myApp.catalogue.get(19), 6);
+        newOrder.addToCart(myApp.catalogue.get(87), 14);
+        newOrder.addToCart(myApp.catalogue.get(12), 1);
+        newOrder.addToCart(myApp.catalogue.get(13), 1);
+        newOrder.addToCart(myApp.catalogue.get(24), 2);
+        newOrder.addToCart(myApp.catalogue.get(56), 4);
+        newOrder.addToCart(myApp.catalogue.get(23), 8);
+        newOrder.addToCart(myApp.catalogue.get(89), 12);
+        newOrder.addToCart(myApp.catalogue.get(53), 7);
+        newOrder.addToCart(myApp.catalogue.get(89), 12);
+        System.out.println(newOrder.calculatePrice());
+
     }
 
 }
