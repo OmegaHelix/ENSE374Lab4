@@ -39,4 +39,14 @@ public Order(Customer customer, int orderID)
         this.cart.add(orderline);
     }
 
+
+    public void deleteOrderLine(int index)
+    {
+        this.cart.remove(index);
+    }
+
+    public void deleteOrderLine(OrderLine  orderline)
+    {
+        this.cart.remove(orderline);
+    }
 }
