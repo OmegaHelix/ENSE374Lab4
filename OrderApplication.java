@@ -65,8 +65,37 @@ public class OrderApplication
         newOrder.addToCart(myApp.catalogue.get(89), 12);
         newOrder.addToCart(myApp.catalogue.get(53), 7);
         newOrder.addToCart(myApp.catalogue.get(89), 12);
-        System.out.println(newOrder.calculatePrice());
+System.out.println("Cart price is: " + toString(newOrder.calculatePrice());
 
+        while(input != 'q')
+        {
+        BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter the number of an option:");
+        System.out.print("1: Add an item");
+        System.out.print("2: Delete an item");
+        System.out.print("Enter 'q' to exit");
+        input =  buff.readLine();
+        if(input == "q")
+        break;
+        try{
+                int i = Integer.parseInt(input);
+            }
+        catch(NumberFormatException nfe)
+            {
+                System.err.println("Invalid input!");
+            }
+        switch(input)
+        {
+            case 1: 
+            
+            break;
+            case 2: 
+
+            break;
+            case 'q': 
+            
+            break;
+        }
     }
 
 }
